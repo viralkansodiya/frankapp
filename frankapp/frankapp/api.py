@@ -29,7 +29,7 @@ class vestaCurrencyExchangeSettings(CurrencyExchangeSettings):
 			self.set("result_key", [])
 			self.set("req_params", [])
 
-			self.api_endpoint = get_api_endpoint(self.service_provider, self.use_http)
+			self.api_endpoint = get_api_endpoint(self.service_provider, 0)
 			self.append("result_key", {"key": "result"})
 			self.append("req_params", {"key": "access_key", "value": self.access_key})
 			self.append("req_params", {"key": "amount", "value": "1"})
@@ -40,7 +40,7 @@ class vestaCurrencyExchangeSettings(CurrencyExchangeSettings):
 			self.set("result_key", [])
 			self.set("req_params", [])
 
-			self.api_endpoint = get_api_endpoint(self.service_provider, self.use_http)
+			self.api_endpoint = get_api_endpoint(self.service_provider, 0)
 			self.append("result_key", {"key": "rates"})
 			self.append("result_key", {"key": "{to_currency}"})
 			self.append("req_params", {"key": "base", "value": "{from_currency}"})
