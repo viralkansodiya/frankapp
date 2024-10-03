@@ -6,6 +6,6 @@ def execute():
 	if doc.service_provider != "frankfurter.app":
 		return
 
-	set_parameters_and_result(doc)
+	doc.set_parameters_and_result()
 	doc.flags.ignore_validate = True
 	doc.save()
